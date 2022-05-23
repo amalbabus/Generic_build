@@ -15,7 +15,7 @@ jobs:
         - name: Publish to artifactory
           uses: advancedcsg-open/action-jfrog-cli@master
           with:
-             url: 'https://artifactory.ssrcdevops.tii.ae:443'
+             url: 'https://artifactory.ssrcdevops.tii.ae'
              credentials type: 'apikey'
              apikey: ${{secrets.RT_APIKEY}}
              args: u "debian-handbook.pdf" "artifactory/github_actions_testing/" --recursive=true --build-name=pdf-build 
