@@ -1,0 +1,21 @@
+
+name: Pushing artifact to jfrog
+
+on:
+    push:
+      branches:
+        - "main"
+
+jobs:
+    artifactoryUpload:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout
+          uses: actions/checkout@v1.2.0
+        - name: Publish to artifactory
+          uses: advancedcsg-open/action-jfrog-cli@master
+          with:
+             url: 'https://artifactory.ssrcdevops.tii.ae'
+             credentials type: 'apikey'
+             apikey: ${{secrets.RT_APIKEY}}
+             args: u "dist/*" "tii-sel4-artifacts/" --recursive=true --build-name=debian-handbook.pdf
