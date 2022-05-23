@@ -26,6 +26,6 @@ jobs:
           env: 
               APIKEY: ${{secrets.RT_APIKEY}}
           run: |
-              jf c add --url https://artifactory.ssrcdevops.tii.ae:443/artifactory --user amal45 --password "$APIKEY"
+              jf c add --url https://artifactory.ssrcdevops.tii.ae:443/artifactory --user ssrcadmin --password Hij9HJWKYZzKgmMW
               # jf c show
    
