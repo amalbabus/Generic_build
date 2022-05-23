@@ -18,4 +18,4 @@ jobs:
              url: 'https://artifactory.ssrcdevops.tii.ae:443'
              credentials type: 'apikey'
              apikey: ${{secrets.RT_APIKEY}}
-             args: u "debian-handbook.pdf" "github_actions_testing/" --recursive=true --build-name=pdf-build 
+             args: u "debian-handbook.pdf" "artifactory/github_actions_testing/" --recursive=true --build-name=pdf-build 
