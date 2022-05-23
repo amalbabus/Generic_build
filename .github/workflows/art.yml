@@ -22,8 +22,10 @@ jobs:
           uses: "jfrog/setup-jfrog-cli@v2"
         - name: Version check
           run: jf -v
-        # - name: Setting up jf cli with username and api key
-        #   env: 
-        #       APIKEY: ${{secrets.RT_APIKEY}}
-        #   run: jfrog
+        - name: Setting up jf cli with username and api key
+          env: 
+              APIKEY: ${{secrets.RT_APIKEY}}
+          run: |
+              jf c add --url https://artifactory.ssrcdevops.tii.ae:443/artifactory --user amal45 --password $APIKEY/
+              jf c show
    
