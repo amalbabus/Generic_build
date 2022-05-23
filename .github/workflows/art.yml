@@ -19,7 +19,7 @@ jobs:
           #    credentials type: 'apikey'
           #    apikey: ${{secrets.RT_APIKEY}}
           #    args: u "debian-handbook.pdf" "artifactory/github_actions_testing/" --recursive=true --build-name=pdf-build 
-          uses: "jfrog/setup-jfrog-cli@v1"
+          uses: "jfrog/setup-jfrog-cli@v2"
         - name: Version check
           run: jf -v
         # - name: Setting up jf cli with username and api key
