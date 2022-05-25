@@ -26,7 +26,7 @@ jobs:
           env: 
               APIKEY: ${{secrets.RT_APIKEY}}
           run: |
-              jf c add --url https://artifactory.ssrcdevops.tii.ae:443 --user amal45 --password "$APIKEY"
+              jf c add --url https://artifactory.ssrcdevops.tii.ae:443 --user amal45 --password AKCp8kr16GhixaZdAwvdj5cdtX4moWGuXCCdgEM8zMhbKt9r4YT8QQsKSgtdX5hgQqqwp3zNw
               jf c show
               jf rt ping 
               jf rt u "data/file/*" github_actions_testing/
