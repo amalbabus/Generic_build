@@ -29,5 +29,5 @@ jobs:
               jf c add --url https://artifactory.ssrcdevops.tii.ae:443 --user amal45 --password "$APIKEY"
               jf c show
               jf rt ping 
-              jf rt u debian-handbook.pdf github_actions_testing
+              jf rt u "data/file/debian-handbook.pdf" github_actions_testing/data/file
    
