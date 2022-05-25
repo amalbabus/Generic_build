@@ -26,6 +26,8 @@ jobs:
           env: 
               JF_ENV_1: ${{secrets.RT_APIKEY}}
           run: |
+              echo $JF_ENV_1
+              echo ${{secrets.RT_APIKEY}}
               jf c add --url https://artifactory.ssrcdevops.tii.ae:443 --user amal45 --password ${{secrets.RT_APIKEY}}
               jf c show
               jf rt ping 
