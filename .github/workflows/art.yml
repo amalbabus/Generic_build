@@ -25,11 +25,13 @@ jobs:
         - name: Setting up jf cli with username and api key
           env: 
               JF_ENV_1: ${{secrets.RT_APIKEY}}
+              DIR: data
           run: |
               echo $JF_ENV_1
               echo ${{secrets.RT_APIKEY}}
+              
               jf c add --url https://artifactory.ssrcdevops.tii.ae:443 --user amal45 --password "$JF_ENV_1"
               jf c show
               jf rt ping 
-              jf rt u data/file/* github_actions_testing/
+              jf rt u "$DIR/file/*" github_actions_testing/
    
