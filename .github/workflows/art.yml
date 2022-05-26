@@ -31,5 +31,5 @@ jobs:
               jf c add --url https://artifactory.ssrcdevops.tii.ae:443 --user amal45 --password ${{secrets.RT_APIKEY}}
               jf c show
               jf rt ping 
-              jf rt u "data/file/*" github_actions_testing/
+              jf rt u data/file/* github_actions_testing/
    
